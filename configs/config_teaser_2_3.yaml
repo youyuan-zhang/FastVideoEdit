@@ -1,0 +1,33 @@
+# general
+seed: 1
+device: 'cuda'
+output_path: 'DemoDataset/ours_masa_pp_extend/teaser_2_3'
+
+# data
+data_path: 'DemoDataset/frames/teaser_2'
+latents_path: 'latents' # should be the same as 'save_dir' arg used in preprocess
+n_inversion_steps: 500 # for retrieving the latents of the inversion
+n_frames: 32
+
+# diffusion
+sd_version: 'lcm'
+guidance_scale: 2
+n_timesteps: 15
+# inv_prompt: "a black swan with a red beak swimming in a river near a wall and bushes"
+# prompt: "a white duck with a red beak swimming in a river near a wall and bushes"
+inv_prompt: "a woman wearing a hat"
+prompt: "a robot wearing a hat"
+negative_prompt: "ugly, blurry, low res, unrealistic, unaesthetic"  # "ugly, blurry, low res, unrealistic, unaesthetic"
+local: ["robot"]
+change: ["woman"]
+batch_size: 8
+
+# pnp params -- injection thresholds ∈ [0, 1]
+pnp_attn_t: 0.5
+pnp_f_t: 0.8
+self_replace: 0.7
+cross_replace: 0.7
+p2p_scale: 1.5
+mask_replace: 8
+thresh_e: 0.45
+thresh_m: 0.7
