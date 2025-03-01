@@ -20,8 +20,3 @@ This repository contains the implementation of *FastVideoEdit*.
 > pythom run_demo.py --config_path configs/config_teaser_4_2.yaml
 
 results will be saved in `./DemoDataset/ours_masa_pp_extend`.
-  
-
-### To run TGVE benchmark
-
-Work in progress.
